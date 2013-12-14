@@ -38,6 +38,10 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Gem to login users via Facebook
 gem 'omniauth-facebook'
 gem 'omniauth'
+
+# # Backbone.JS compiler
+gem 'backaid', '~> 0.1.9'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
