@@ -1,0 +1,22 @@
+<form class="search">
+    <input type="text" name="title" placeholder="Enter Keyword">
+    <button>Submit</button>
+</form>
+
+ <h1>Now on sale:</h1>
+<script type="text/html" class="search-result"> 
+  <h3><%%= this.model.get("name") + "  " + this.model.get("salePriceLabel") %> <span><%%= " (" + Math.round(((this.model.get("price") - this.model.get("salePrice")) / this.model.get("price")) * 100) + "% OFF)" %></span>
+  
+  <span>
+  <%% if (this.model.get("added")) { %>
+  <button type="button" class="add" disabled>Added!</button>
+  <%% } else { %>
+  <button type="button" class="add">Add to Watch List</button>
+  <%% } %>
+
+  <a href= "<%%= this.model.get("pageUrl") %>" target="_blank"><img src=" <%%= this.model.get("image").sizes.Original.url %>"  class="image" />
+  </a>
+  </span></h3>
+
+</script>
+

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'shopsense-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -39,8 +40,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'omniauth-facebook'
 gem 'omniauth'
 
-# # Backbone.JS compiler
+# Backbone.JS compiler
 gem 'backaid', '~> 0.1.9'
+
+gem 'httparty'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -50,3 +54,4 @@ gem 'backaid', '~> 0.1.9'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'pry-rails'

@@ -1,5 +1,5 @@
 Lastcall::Application.routes.draw do
-  root 'products#index', as: '/'
+  root 'search#index', as: '/'
 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
@@ -9,7 +9,10 @@ Lastcall::Application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-resources :users
-resources :sessions
-resources :products
+  resources :users
+  resources :sessions 
+  resources :search
+
+  get "search_products", to: "search#search_products"
+  
 end

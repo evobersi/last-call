@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController 
   def new
+    if logged_in?
+      redirect_to search_path
+    end
   end
 
   def create
@@ -13,9 +16,9 @@ class SessionsController < ApplicationController
       redirect_to login_path, notice: "Logged in!"
     else
       flash.now.alert = "Email or password is invalid"
-      redirect_to login_path
     end
   end
+
 
   def destroy
     session[:user_id] = nil

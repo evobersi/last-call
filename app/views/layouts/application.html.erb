@@ -2,32 +2,29 @@
 <html>
 <head>
   <title>Last Call</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div id="container">
-    <div id="user_header">
-     <% if logged_in? %>
-      Logged in as <%= current_user.email %>.
-      <%= link_to "Log Out", logout_path %>
-      <%= link_to "Edit Profile", edit_user_path(current_user) %>
-    <% end %>
-    <% if !logged_in? %>
-      <%= link_to "Sign Up", signup_path %> or
-      <%= link_to "Log In", login_path %>
-      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-    <% end %>
-    </div>
-    <% flash.each do |name, msg| %> 
-      <%= content_tag "flash_#{name}" %>
-    <% end %>     
+  <div id="user_header">
+   <% if logged_in? %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log Out", logout_path %>
+    <%= link_to "Edit Profile", edit_user_path(current_user) %>
+  <% end %>
+  <% if !logged_in? %>
+    <%= link_to "Sign Up", signup_path %> or
+    <%= link_to "Log In", login_path %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+  <% end %>
+  </div>
 </div>
+
 <%= yield %>
 
 <%= javascript_include_tag 'application' %>
-
-<footer>&copy; LastCall. </footer>
 </body>
 </html>
+<footer>&copy; LastCall. </footer>
+
