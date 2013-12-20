@@ -1,7 +1,7 @@
 console.log("LOADED APP.JS");
 var Product = Backbone.Model.extend({
   urlRoot: "/search",
-  initialize: function( ) {},
+  initialize: function() {},
   load: function() {},
 });
 

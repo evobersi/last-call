@@ -16,7 +16,7 @@
 //= require underscore
 //= require backbone
 //= require app
-//= require_self
+//= require_tree . 
 
 
 
