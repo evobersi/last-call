@@ -3,7 +3,7 @@
     <button>Submit</button>
 </form>
 
- <h1>Now on sale:</h1>
+ <h1 class="sale">Now on sale:</h1>
 <script type="text/html" class="search-result"> 
   <h3><%%= this.model.get("name") + "  " + this.model.get("salePriceLabel") %> <span><%%= " (" + Math.round(((this.model.get("price") - this.model.get("salePrice")) / this.model.get("price")) * 100) + "% OFF)" %></span>
   

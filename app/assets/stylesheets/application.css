@@ -18,15 +18,26 @@ li {
 
 body { 
   margin: 0 auto;
+  width: 980px;
+  background: rgba(239, 250, 232, 0.5); 
+
 }
 
 h1 {
-  color: black;
   font-style: Helvetica;
   float: center;
 }
 
+h1.sale {
+  position: center;
+  font-size: 3em;
+  font-family: Helvetica;
+}
 h3 {
+  padding: 5px;
+  color: goldenrod;
+  border: 1px;
+  font-size: 1.5em;
   float: right;
 }
 
@@ -38,15 +49,32 @@ form.search {
   position: relative;
   right: 20px;
   float: right;
-  top: -80px;
+
 }
 
 img.image {
-  display: block;
   margin-left: auto;
   margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  position: relative;
+
 }
 
-ul.results {
-  border-radius: 10px black;
+h3 {
+  word-wrap:break-word;
+  position:  relative;
+  float: right;
+  border-radius:15px;
+  box-shadow:inset 0px 0px 20px rgba(0,0,0,1);
+}
+
+
+div#user_header {
+  font-size: 30px;
+}
+
+span {
+  font-size: 1.5em;
 }

@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController 
   def new
     if logged_in?
-      redirect_to search_path
+      redirect_to search_index_path
     end
   end
 
