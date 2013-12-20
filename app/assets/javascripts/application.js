@@ -19,7 +19,8 @@
 //= require_tree . 
 
 
-
+window.onload = function(){ console.log("LOADED");
+}
 
 
 

@@ -152,3 +152,7 @@ var IndividualProductView = Backbone.View.extend({
 });
 
 Backbone.history.start();
+
+$(function(){
+  console.log("loaded app.js");
+})
