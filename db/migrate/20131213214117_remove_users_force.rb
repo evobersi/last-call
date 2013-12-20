@@ -1,5 +1,5 @@
 class RemoveUsersForce < ActiveRecord::Migration
   def change
-    drop_table :users__forces
+    drop_table :users_forces
   end
 end
